@@ -42,7 +42,7 @@ app.post("/enhanceprompt", async (req, res) => {
       { text: data },
     ];
 
-    const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY);
+    const genAI = new GoogleGenerativeAI("AIzaSyAQkzNA7QsznNV5C6a2SYNO3-oLxj0s9oQ");
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
     const result = await model.generateContent(prompt);
